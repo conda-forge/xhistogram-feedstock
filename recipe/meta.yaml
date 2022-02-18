@@ -10,7 +10,7 @@ source:
   sha256: 949e31126923ebd24f2c506f45d6c6d9fcc1661f2a9e441f212efff25c71c907
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -22,7 +22,7 @@ requirements:
   run:
     - python >=3.6
     - xarray
-    - dask
+    - dask-core
     - numpy
 
 test:
