@@ -1,5 +1,5 @@
 {% set name = "xhistogram" %}
-{% set version = "0.3.1" %}
+{% set version = "0.3.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 949e31126923ebd24f2c506f45d6c6d9fcc1661f2a9e441f212efff25c71c907
+  sha256: 56b0751e1469eaed81710f644c8ba5c574b51883baa2feee26a95f2f708f91a1
 
 build:
   number: 0
