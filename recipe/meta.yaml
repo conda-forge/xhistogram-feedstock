@@ -6,26 +6,28 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 56b0751e1469eaed81710f644c8ba5c574b51883baa2feee26a95f2f708f91a1
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - pytest-runner
   run:
-    - python >=3.6
+    - python >={{ python_min }}
     - xarray
     - dask
     - numpy
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - xhistogram
 
